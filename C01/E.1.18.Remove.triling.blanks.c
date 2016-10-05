@@ -26,12 +26,12 @@ int main(int argc, char** argv)
 
 	line_len = mygetline(text);
 
-	printf("\n -> \t%s<-|",text);
-
 	for (int i = line_len; i >= 0; i--)
-		if (text[i] == '\n' && (text[i-1] == '\t' || text[i=1] == ' ') )
-			for (int j = i ; j < line_len; j++)
-				text[i-1] = text[i];
+		if (text[i] == '\n' && (text[i-1] == '\t' || text[i-1] == ' ' || text[i-1] == '\n') )
+			for (int j = i ; j <= line_len; j++)
+				text[j-1] = text[j];
+
+	printf("%s",text);
 
 	return 0;
 }
