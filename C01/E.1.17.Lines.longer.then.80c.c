@@ -4,6 +4,7 @@
 
 /* 
  * Write a program to print all input lines that are longer than 80 characters.
+ * TODO: use functions ? 
  */
 
 
@@ -22,7 +23,9 @@ int main(int argc, char** argv)
 			text[i] = '\0';
 			printf("%s\n",text);
 			i = 0;
-		}
+		} 
+		if (c == '\n' && i < 5) 
+			i = 0;
 	}
 }
 

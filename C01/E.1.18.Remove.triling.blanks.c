@@ -6,7 +6,7 @@
 
 #define MAX_LINE 10000
 
-int mygetline(char line[], int line_num)
+int mygetline(char line[])
 {
 	char c;
 	int i = 0;
@@ -22,10 +22,9 @@ int mygetline(char line[], int line_num)
 int main(int argc, char** argv)
 {
 	char text[MAX_LINE];
-	int line = 0;
 	int line_len = 0;
 
-	line_len = mygetline(text,line);
+	line_len = mygetline(text);
 
 	printf("\n -> \t%s<-|",text);
 
