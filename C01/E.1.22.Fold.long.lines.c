@@ -25,6 +25,7 @@ int getmyinput(char text[])
 		input_len++;
 	}
 	text[input_len] = '\0';
+	text[input_len+1] = '\0';
 	return input_len++;
 }
 
@@ -52,9 +53,11 @@ int fold(char text[], int input_len)
 			current_len += 2;
 			temp_char = text[current_pos];
 			temp_char2 = text[current_pos+1];
-			text[current_pos+1] = '-';
-			text[current_pos+2] = '\n';
-			for (int j = current_pos+2; j < current_len; j++) {
+			text[current_pos] = '-';
+			text[current_pos+1] = '\n';
+
+			current_pos += 2;
+			for (int j = current_pos; j < current_len; j++) {
 				temp_char3 = text[j];
 				temp_char4 = text[j+1];
 				text[j] = temp_char;
@@ -65,6 +68,7 @@ int fold(char text[], int input_len)
 		}
 	}
 
+	text[current_len] = '\0';
 	return current_len;
 }
 
