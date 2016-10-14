@@ -1,6 +1,9 @@
 /* Write a program to check a C program for rudimentary syntax errors like unbalanced parentheses, brackets and braces. Don’t forget about quotes, both single and double, escape sequences, and comments. (This program is hard if you do it in full generality.) */
 
-/* TODO: make it nicer */
+/* TODO: make it nicer 
+ *	 make some testing 
+ */
+
 
 #include <stdio.h>
 
